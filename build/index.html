@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/main.js" type="module"></script>
+    <title>Rock, Paper Scissors</title>
+  </head>
+  <body class="bg-body text-font flex flex-col flex-grow-1 justify-center items-center font-patua" >
+    <section>
+      <h1 class=" break-keep bg-header border-x-8 tracking-wider sm:tracking-widest border-header block text-2xl font-extrabold py-4 text-center mb-4">--- ROCK - PAPER - SCISSORS ---</h1>
+      <section id="scoreboard" class="flex flex-col mx-6 mb-6 border-border border-4 bg-scoreboard rounded-2xl">
+        <h2 class="text-xl font-semibold p-4 border-border border-b-4 text-center tracking-widest">Scoreboard</h2>
+        <section class="flex justify-around">
+          <div id="score" class="border-border border-r-4 flex flex-col justify-center items-center p-2">
+            <div class="text-lg m-2">Player</div>
+            <div class="text-lg m-2">Computer</div>
+          </div>
+          <div class="flex flex-col justify-center items-stretch p-2">
+            <div class="text-lg m-2" id="player__score">- -</div>
+            <div class="text-lg m-2" id="computer__score">- -</div>
+          </div>
+      </section>
+      </section>
+    </section>
+    <section id="form__container">
+      <form id="form" type="post" class="border-border border-2 p-6 flex flex-col items-center bg-gameboard rounded-2xl">
+        <p class="text-2xl pb-2 font-bold" for="player__option">Select Your Option :</p>
+        <div>
+          <!--EVERYTHING INSIDE THIS DIV IS COPIED (AND THEN CONVERTED TO TAILWINDCSS, BY ME) FROM https://moderncss.dev/pure-css-custom-styled-radio-buttons/ -->
+          <label class="text-xl font-medium grid gap-[0.5em] " for="rock">
+          <input class="appearance-none bg-gameboard m-0 text-current w-[1.15em] h-[1.15em] border-[0.15em] border-solid border-current rounded-[50%] translate-y-[0.15em] grid place-content-center" type="radio" name="player__option" value="ROCK" id="rock"/>
+          ROCK</label>
+          <label class="text-xl font-medium grid gap-[0.5em] mt-2 " for="paper">
+          <input class="appearance-none bg-gameboard m-0 text-current w-[1.15em] h-[1.15em] border-[0.15em] border-solid border-current rounded-[50%] translate-y-[0.15em] grid place-content-center" type="radio" name="player__option" value="PAPER" id="paper"/>
+          PAPER</label>
+          <label class="text-xl font-medium grid gap-[0.5em] mt-2 " for="scissors">
+          <input class="appearance-none bg-gameboard m-0 text-current w-[1.15em] h-[1.15em] border-[0.15em] border-solid border-current rounded-[50%] translate-y-[0.15em] grid place-content-center" type="radio" name="player__option" value="SCISSORS" id="scissors"/>
+          SCISSORS</label>
+        </div>
+        <button type="submit" id="lock__btn" class="rounded-xl px-4 py-1 bg-scoreboard mt-2 border-2 border-border font-semibold hover:bg-header  focus:bg-header"> 
+          LOCK
+        </button>
+        <button hidden id="reset__btn" type="reset" class="rounded-xl border-border px-4 py-1 bg-scoreboard mt-2 border-2 font-semibold hover:bg-header  focus:bg-header">Play Again..?</button>
+        <div class="flex flex-col items-center mb-4 mt-4">
+        <p class="text-lg pb-2 font-bold" for="computer__option">Computer Chooses:</p>
+        <p id="computer__option" class="text-font">- - -</p>
+      </div>
+      <div class="flex flex-col justify-center items-center">
+        <p class="text-lg pb-2 font-bold" for="game__result">RESULT !</p>
+        <p id="game__result" class="text-font">- - -</p>
+      </div> <br>
+      </form>
+    </section>
+    
+  </body>
+</html>
